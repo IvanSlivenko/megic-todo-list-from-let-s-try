@@ -1,0 +1,14 @@
+https://youtu.be/yUxJ9GU32do?list=PLkUJHNMBzmtRuSUgA_9g0lmMC_Y1TW2K1
+
+npx create-react-app magic-todo
+
+
+https://www.npmjs.com/package/react-draggable
+
+https://www.npmjs.com/package/randomcolor
+
+https://www.npmjs.com/package/uuid
+
+
+-----------------------------------------------
+00 : 10 : 05

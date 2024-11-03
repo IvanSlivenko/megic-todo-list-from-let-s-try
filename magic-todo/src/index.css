@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.todo__item {
+  position: absolute;
+  cursor: move;
+  min-width: 215px;
+  color: black;
+  padding: 1em;
+  border-radius: 5px;
+
+
+}
+
+.delete {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  font-size: 25px;
+}
+
+.delete:hover {
+  color: red;
+   cursor: pointer;
+}

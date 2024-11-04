@@ -20,13 +20,8 @@ function App() {
       const newItem = {
         id: uuidv4(),
         item,
-        color: randomColor({
-          luminosity: 'light',
-        }),
-        defaultPos: {
-          x: 500,
-          y: -500,
-        },
+        color: randomColor({ luminosity: 'light' }),
+        defaultPos: { x: 500, y: -500 },
       };
       setItems((items) => [...items, newItem]);
       setItem(''); // Очищуємо поле після додавання
@@ -52,8 +47,13 @@ function App() {
         <input
           type="text"
           placeholder="Введіть завдання"
-          value={item} // Прив'язуємо значення поля введення
+          value={item}
           onChange={(e) => setItem(e.currentTarget.value)}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              newItem();
+            }
+          }}
         />
         <button className="enter" onClick={newItem}>
           Зберегти
@@ -69,7 +69,7 @@ function App() {
             {item.item}
             <button
               className="delete"
-              onClick={() => deleteItem(item.id)} // Додаємо функціонал видалення
+              onClick={() => deleteItem(item.id)}
             >
               x
             </button>
@@ -81,5 +81,3 @@ function App() {
 }
 
 export default App;
-
-
